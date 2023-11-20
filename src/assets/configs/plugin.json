@@ -1,0 +1,410 @@
+[
+    {
+        "file_path": "addons/configs/vgrank/configs/core.cfg",
+        "description": "This is the core file configuration for the gameplay, the value should be in a double quote \"\" for any type.",
+        "variables": {
+            "rank_references": {
+                "description": "The variable manages the rank reference. It enables cross-server ranking among servers using the same reference. If each server requires a specific ranking, a different reference is needed for each server.",
+                "requiere": true,
+                "type": "string",
+                "default_value": "DEFAULT"
+            },
+            "enable_ffa": {
+                "description": "Enable free-for-all mode.",
+                "required": false,
+                "type": "boolean",
+                "default_value": false
+            },
+            "minimum_points": {
+                "description": "The minimum number of points required to be in the global rank.",
+                "required": true,
+                "type": "integer",
+                "default_value": 100
+            },
+            "minimum_session_points": {
+                "description": "The minimum number of points required to be in the rank of the current map session.",
+                "required": true,
+                "type": "integer",
+                "default_value": 15
+            },
+            "minimum_players": {
+                "description": "The minimum number of players to activate point gain/loss.",
+                "required": true,
+                "type": "integer",
+                "default_value": 5
+            },
+            "host": {
+                "description": "The host address for the database.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "database": {
+                "description": "The name of the database.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "password": {
+                "description": "The database password.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "user": {
+                "description": "The database user.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "port": {
+                "description": "The port for the database connection.",
+                "required": true,
+                "type": "integer",
+                "default_value": 3306
+            }
+        }
+    },
+    {
+        "file_path": "addons/configs/vgrank/configs/points.cfg",
+        "description": "This is the points configuration files, the value should be in a double quote \"\" for any type.",
+        "variables": {
+            "points_loose_suicide": {
+                "description": "Points lost for committing suicide.",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_loose_teamkill": {
+                "description": "Points lost for team-killing.",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_loose_kill_weapon": {
+                "description": "Points lost for killing with a weapon.",
+                "required": true,
+                "type": "integer",
+                "default_value": 1
+            },
+            "points_loose_kill_weapon_hs": {
+                "description": "Points lost for headshot kills with a weapon.",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_loose_kill_knife": {
+                "description": "Points lost for killing with a knife.",
+                "required": true,
+                "type": "integer",
+                "default_value": 3
+            },
+            "points_win_kill_weapon": {
+                "description": "Points earned for killing with a weapon.",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_win_kill_assist": {
+                "description": "Points earned for assisting in a kill.",
+                "required": true,
+                "type": "integer",
+                "default_value": 1
+            },
+            "points_win_kill_weapon_hs": {
+                "description": "Points earned for headshot kills with a weapon.",
+                "required": true,
+                "type": "integer",
+                "default_value": 3
+            },
+            "points_win_kill_knife": {
+                "description": "Points earned for killing with a knife.",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_win_bomb_planted_player": {
+                "description": "Points earned for planting the bomb (individual).",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_win_bomb_planted_team": {
+                "description": "Points earned for planting the bomb (team).",
+                "required": true,
+                "type": "integer",
+                "default_value": 1
+            },
+            "points_win_bomb_exploded_player": {
+                "description": "Points earned for the bomb exploding (individual).",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_win_bomb_exploded_team": {
+                "description": "Points earned for the bomb exploding (team).",
+                "required": true,
+                "type": "integer",
+                "default_value": 1
+            },
+            "points_win_bomb_defused_player": {
+                "description": "Points earned for defusing the bomb (individual).",
+                "required": true,
+                "type": "integer",
+                "default_value": 2
+            },
+            "points_win_bomb_defused_team": {
+                "description": "Points earned for defusing the bomb (team).",
+                "required": true,
+                "type": "integer",
+                "default_value": 1
+            }
+        }
+    },
+    {
+        "file_path": "addons/configs/vgrank/configs/phrases.cfg",
+        "description": "This is the translation file. The key should be the local that you want to use.",
+        "variables": {
+            "language": {
+                "description": "This is the language used for the translations.",
+                "required": true,
+                "type": "string",
+                "default_value": "en"
+            },
+            "TOP_PLAYERS_NOTAVAILABLE": {
+                "description": "No top players available.",
+                "required": true,
+                "type": "string",
+                "default_value": "{RED}There is no top players"
+            },
+            "TOP_PLAYERS_TITLE_SESSION": {
+                "description": "Title for the session's top players.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}--- {LIGHTGREEN}TOP PLAYERS {GREEN}---"
+            },
+            "TOP_PLAYERS_TITLE": {
+                "description": "Title for the top players.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}--- {LIGHTGREEN}TOP PLAYERS FOR THIS SESSION {GREEN}---"
+            },
+            "TOP_PLAYER": {
+                "description": "Template for displaying individual player in the top.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}%i {GREEN}- %s with {LIGHTGREEN}%i point(s)"
+            },
+            "RANK_RESET": {
+                "description": "Message when a player's rank is reset.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Your rank has been reset"
+            },
+            "BOMB_PLANT_PLAYER": {
+                "description": "Message when a player plants the bomb.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}+%i points{LIGHTGREEN}, you planted the bomb"
+            },
+            "BOMB_PLANT_TEAM": {
+                "description": "Message when the bomb is planted and points are awarded to all terrorists.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}The bomb has been planted, {LIGHTGREEN}+%i {GREEN}points to all terrorists"
+            },
+            "BOMB_DEFUSED_PLAYER": {
+                "description": "Message when a player defuses the bomb.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}+%i points{LIGHTGREEN}, you defused the bomb"
+            },
+            "BOMB_DEFUSED_TEAM": {
+                "description": "Message when the bomb is defused and points are awarded to all counter-terrorists.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}The bomb has been defused, {LIGHTGREEN}+%i {GREEN}points to all counter-terrorists"
+            },
+            "BOMB_EXPLODED_PLAYER": {
+                "description": "Message when a player detonates the bomb.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}+%i points{LIGHTGREEN}, you detoned the bomb"
+            },
+            "BOMB_EXPLODED_TEAM": {
+                "description": "Message when the bomb explodes and points are awarded to all terrorists.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}The bomb exploded, {LIGHTGREEN}+%i {GREEN}points to all terrorists"
+            },
+            "DEATH_SUICIDE": {
+                "description": "Message when a player commits suicide.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTRED}-%i points{RED}, you committed suicide"
+            },
+            "TEAMKILL": {
+                "description": "Message when a player kills a teammate.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTRED}-%i points{RED}, you killed a teammate"
+            },
+            "KILL_KNIFE": {
+                "description": "Message when a player kills an enemy with a knife.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}+%i points{GREEN}, you killed an enemy with a knife"
+            },
+            "KILL_ASSIST": {
+                "description": "Message when a player assists in killing an enemy.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}+%i points{GREEN}, you assist to kill an ennemy"
+            },
+            "DEATH_BY_KNIFE": {
+                "description": "Message when a player is killed with a knife.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTRED}-%i points{RED}, you were killed with a knife"
+            },
+            "KILL_HEADSHOT": {
+                "description": "Message when a player kills an enemy with a headshot.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}+%i points,{GREEN} you killed an enemy with an headshot"
+            },
+            "DEATH_BY_HEADSHOT": {
+                "description": "Message when a player is killed with a headshot.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTRED}-%i points{RED}, you were killed with an headshot"
+            },
+            "KILL_WEAPON": {
+                "description": "Message when a player kills an enemy with a weapon.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}+%i points{GREEN}, you killed an enemy"
+            },
+            "DEATH_BY_WEAPON": {
+                "description": "Message when a player is killed by an enemy weapon.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTRED}-%i points{RED}, you were killed"
+            },
+            "NO_DB_AUTHICATED": {
+                "description": "Message when a player is not authenticated to the database.",
+                "required": true,
+                "type": "string",
+                "default_value": "{RED}You are not authenticated to our database"
+            },
+            "MISSING_POINTS": {
+                "description": "Message when a player is missing points to be in the rank.",
+                "required": true,
+                "type": "string",
+                "default_value": "{RED}You are missing {LIGHTRED}%i points {RED}before being in the rank"
+            },
+            "IGNORE_ANNOUCE_DESABLE": {
+                "description": "Message when a player disables announcements.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}You {LIGHTGREEN}disabed {GREEN}the annouces"
+            },
+            "IGNORE_ANNOUCE_ENABLE": {
+                "description": "Message when a player enables announcements.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}You {LIGHTGREEN}enable {GREEN}the annouces"
+            },
+            "PRINT_COMMAND": {
+                "description": "Template for printing a command.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}!%s {GREEN}%s"
+            },
+            "RANK_NOT_FOUND": {
+                "description": "Message when a player's rank cannot be found.",
+                "required": true,
+                "type": "string",
+                "default_value": "{LIGHTGREEN}We cannot find your rank, please contact an administrator"
+            },
+            "RANK": {
+                "description": "Message displaying the player's current rank.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}You are currently ranked {LIGHTGREEN}%i"
+            },
+            "RANK_SESSION": {
+                "description": "Message displaying the player's current rank for the session.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}You are currently ranked {LIGHTGREEN}%i {GREEN}for the current session"
+            },
+            "STAT_SESSION_TITLE": {
+                "description": "Title for displaying session statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}--- {LIGHTGREEN}STATISTICS FOR THE CURRENT SESSION {GREEN}---"
+            },
+            "STAT_TITLE": {
+                "description": "Title for displaying overall statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}--- {LIGHTGREEN}STATISTICS {GREEN}---"
+            },
+            "STAT_POINTS": {
+                "description": "Message displaying the player's points in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Points: {LIGHTGREEN}%i"
+            },
+            "STAT_KILL": {
+                "description": "Message displaying the player's kills in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Kills: {LIGHTGREEN}%i (%.1f T | %.1f CT)"
+            },
+            "STAT_DEATH": {
+                "description": "Message displaying the player's deaths in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Deaths: {LIGHTGREEN}%i (%.1f T | %.1f CT)"
+            },
+            "STAT_ASSIST": {
+                "description": "Message displaying the player's assists in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Assists: {LIGHTGREEN}%i (%.1f T | %.1f CT)"
+            },
+            "STAT_TEAMKILL": {
+                "description": "Message displaying the player's team kills in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Team kills: {LIGHTGREEN}%i (%.1f T | %.1f CT)"
+            },
+            "STAT_SUICIDE": {
+                "description": "Message displaying the player's suicides in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Suicide: {LIGHTGREEN}%.1f"
+            },
+            "STAT_HEADSHOT": {
+                "description": "Message displaying the player's headshots in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Kills by headhost: {LIGHTGREEN}%.1f"
+            },
+            "STAT_KNIFE": {
+                "description": "Message displaying the player's kills with a knife in statistics.",
+                "required": true,
+                "type": "string",
+                "default_value": "{GREEN}Victim by knife: {LIGHTGREEN}%.1f"
+            },
+            "CHAT_FLOODING": {
+                "description": "Message displayed when a player is suspected of chat flooding.",
+                "required": true,
+                "type": "string",
+                "default_value": "{RED}We know that you are the best !"
+            }
+        }
+    }
+]

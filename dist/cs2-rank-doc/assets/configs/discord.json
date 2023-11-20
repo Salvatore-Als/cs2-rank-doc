@@ -1,0 +1,254 @@
+[
+    {
+        "file_path": ".env",
+        "description": "This file is the environment file, you should create .env file at the root path.",
+        "variables": {
+            "DISCORD_TOKEN": {
+                "description": "Your Discord token.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "DISCORD_CLINETID": {
+                "description": "Your bot client ID.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "LOCALE": {
+                "description": "Locale used for date format and translation (fr / en / etc).",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MINIMUM_POINTS": {
+                "description": "Minimum points to be on the rank.",
+                "required": true,
+                "type": "integer",
+                "default_value": null
+            },
+            "MYSQL_HOST": {
+                "description": "MySQL host.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_PASSWORD": {
+                "description": "MySQL password.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_DATABASE": {
+                "description": "MySQL database name.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_USER": {
+                "description": "MySQL user.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_PORT": {
+                "description": "MySQL port.",
+                "required": true,
+                "type": "integer",
+                "default_value": null
+            }
+        }
+    },
+    {
+        "file_path": "src/translations/{local}.json",
+        "description": "This is the folder where there is the translation. The translation file should be named {local}.json, the local is the one that you are using in your .env file.",
+        "variables": {
+            "Sentence_PlayerNotFound": {
+                "description": "Message when the player is not found",
+                "required": true,
+                "type": "string",
+                "default_value": "I can't found this player"
+            },
+            "Sentence_Rank": {
+                "description": "Message format for displaying rank",
+                "required": true,
+                "type": "string",
+                "default_value": "🏆 #VAR#"
+            },
+            "Sentence_NoRank": {
+                "description": "Message when a player is unranked",
+                "required": true,
+                "type": "string",
+                "default_value": "Unranked"
+            },
+            "Sentence_ActionNotPossible": {
+                "description": "Message when a specific action is not possible",
+                "required": true,
+                "type": "string",
+                "default_value": "I can't perform this action"
+            },
+            "Sentence_Points": {
+                "description": "Message format for displaying points",
+                "required": true,
+                "type": "string",
+                "default_value": "**Points:** #VAR#"
+            },
+            "Title_Error": {
+                "description": "Title for error messages",
+                "required": true,
+                "type": "string",
+                "default_value": "Ohh snap !"
+            },
+            "Title_TopPlayers": {
+                "description": "Title for displaying top players",
+                "required": true,
+                "type": "string",
+                "default_value": "Top Players :"
+            },
+            "Stats_TopPlayer": {
+                "description": "Message format for displaying top player stats",
+                "required": true,
+                "type": "string",
+                "default_value": "##VAR# - **#VAR#** with #VAR# points"
+            },
+            "StatsTitle_Kills": {
+                "description": "Title for displaying kills stats",
+                "required": true,
+                "type": "string",
+                "default_value": "Kills: #VAR#"
+            },
+            "StatsTitle_Assits": {
+                "description": "Title for displaying assists stats",
+                "required": true,
+                "type": "string",
+                "default_value": "Assists: #VAR#"
+            },
+            "StatsTitle_Deaths": {
+                "description": "Title for displaying deaths stats",
+                "required": true,
+                "type": "string",
+                "default_value": "Deaths: #VAR#"
+            },
+            "StatsTitle_Bomb": {
+                "description": "Title for displaying bomb stats",
+                "required": true,
+                "type": "string",
+                "default_value": "Bomb"
+            },
+            "Stats_Kills": {
+                "description": "Message format for displaying kills details",
+                "required": true,
+                "type": "string",
+                "default_value": "• #VAR#% CT \\n•• #VAR#% T \\n• #VAR#% Headshot \\n• #VAR#% Knife"
+            },
+            "Stats_Assits": {
+                "description": "Message format for displaying assists details",
+                "required": true,
+                "type": "string",
+                "default_value": "• #VAR#% CT \\n• #VAR#% T"
+            },
+            "Stats_Deaths": {
+                "description": "Message format for displaying deaths details",
+                "required": true,
+                "type": "string",
+                "default_value": "• #VAR#% CT \\n• #VAR#% T \\n• #VAR#% Suicide"
+            },
+            "Stats_Bomb": {
+                "description": "Message format for displaying bomb details",
+                "required": true,
+                "type": "string",
+                "default_value": "• #VAR# Planted \\n• #VAR# Exploded \\n• #VAR# Defused"
+            },
+            "Title_LinkAccount": {
+                "description": "Title for linking a Steam account",
+                "required": true,
+                "type": "string",
+                "default_value": "Link a Steam Account"
+            },
+            "Sentence_DiscordAlreadyLinked": {
+                "description": "Message when Discord account is already linked",
+                "required": true,
+                "type": "string",
+                "default_value": "You have already linked your Discord account"
+            },
+            "Sentence_SteamAlreadyLinked": {
+                "description": "Message when Steam account is already linked",
+                "required": true,
+                "type": "string",
+                "default_value": "This Steam account is already linked to a Discord account"
+            },
+            "Sentence_DiscordLinked": {
+                "description": "Message when Discord account is linked successfully",
+                "required": true,
+                "type": "string",
+                "default_value": "You have linked your Discord account with your Steam account"
+            },
+            "Sentence_RenameNeeded": {
+                "description": "Message asking to change Steam name for linking",
+                "required": true,
+                "type": "string",
+                "default_value": "Please change your Steam name to `#VAR#` and re-enter the command `/#VAR#`"
+            },
+            "Sentence_LinkNeeded": {
+                "description": "Message when Discord account is not linked",
+                "required": true,
+                "type": "string",
+                "default_value": "Ton compte Discord n'est pas lié, utilise `/#VAR#` pour lier ton compte Steam"
+            },
+            "Command_Rank": {
+                "description": "Command for displaying rank",
+                "required": true,
+                "type": "string",
+                "default_value": "rank"
+            },
+            "Command_Top": {
+                "description": "Command for displaying top players",
+                "required": true,
+                "type": "string",
+                "default_value": "top"
+            },
+            "Command_Link": {
+                "description": "Command for linking a Steam account",
+                "required": true,
+                "type": "string",
+                "default_value": "ranklink"
+            },
+            "Command_DescriptionRank": {
+                "description": "Description for rank command",
+                "required": true,
+                "type": "string",
+                "default_value": "Display your rank"
+            },
+            "Command_DescriptionTop": {
+                "description": "Description for top command",
+                "required": true,
+                "type": "string",
+                "default_value": "Display the top"
+            },
+            "Command_DescriptionLink": {
+                "description": "Description for link command",
+                "required": true,
+                "type": "string",
+                "default_value": "Link a Steam account"
+            },
+            "CommandArg_DescriptionGroup": {
+                "description": "Description for selecting a rank",
+                "required": true,
+                "type": "string",
+                "default_value": "Select a rank"
+            },
+            "CommandArg_DescriptionPlayer": {
+                "description": "Description for entering a player",
+                "required": true,
+                "type": "string",
+                "default_value": "Enter a steamid64 or a name"
+            },
+            "CommandArg_Steam": {
+                "description": "Description for entering a steamid64",
+                "required": true,
+                "type": "string",
+                "default_value": "Enter a steamid64"
+            }
+        }
+    }
+]

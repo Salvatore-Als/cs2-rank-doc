@@ -1,0 +1,54 @@
+<button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar" aria-controls="cta-button-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </svg>
+</button>
+
+<div class="absolute top-0 right-0 p-4">
+    <fa-icon size="2x" class="cursor-pointer textl-3xl ext-gray-900 rounded-lg dark:text-white" (click)="switchTheme()" [icon]="themeIcon"></fa-icon>
+</div>
+
+<aside class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <ng-container *ngTemplateOutlet="navigationItemTemplate; context: {items: navigationItems}"></ng-container>
+
+        <alert color="blue" class="mt-6">
+            <p>CS2-Rank is on an <span class="font-bold">ALPHA test</span>, If you would like to participate, contact <span class="font-bold">_Kriax</span> on discord.</p>
+        </alert>
+    </div>
+</aside>
+
+<div class="p-8 h-full block sm:ml-64">
+    <router-outlet></router-outlet>
+
+    <footer class="py-8 flex gap-1 justify-center text-gray-600">
+        <div class="flex gap-1 items-center">
+            <a href="https://github.com/Salvatore-Als/cs2-rank" class="text-gray-600 hover:text-gray-800 transition">
+                <fa-icon [icon]="faGithub"></fa-icon>
+            </a>
+            <span>CS2 Rank by</span>
+            <a href="https://twitter.com/kriax_" class="text-blue-400 hover:text-blue-600 transition">Kriax</a>
+        </div>
+        <span>-</span>
+        <div class="flex gap-1">
+            <span>Sponsored by</span>
+            <a href="https://www.verygames.net/en" class="text-blue-400 hover:text-blue-600 transition">VeryGames</a>
+        </div>
+    </footer>
+</div>
+
+<ng-template #navigationItemTemplate let-items="items" let-class="class">
+    <ul class="space-y-2 font-medium">
+        <li *ngFor="let item of items">
+            <a [routerLink]="item.routerLink" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="bg-gray-100 dark:bg-gray-700" [ngClass]="class" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <fa-icon *ngIf="item.icon" [icon]="item.icon"></fa-icon>
+                <span class="ms-3">{{ item.title }} </span>
+            </a>
+
+            <ng-container *ngIf="item.children?.length">
+                <ng-container *ngTemplateOutlet="navigationItemTemplate; context: {items: item.children, class: 'ml-4'}"></ng-container>
+            </ng-container>
+        </li>
+    </ul>
+</ng-template>

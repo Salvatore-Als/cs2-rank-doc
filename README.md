@@ -1,0 +1,1 @@
+Documentation website for the CS2-Rank plugin https://github.com/Salvatore-Als/cs2-rank
