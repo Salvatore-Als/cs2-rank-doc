@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  githubUrl: 'https://raw.githubusercontent.com/Salvatore-Als/cs2-rank-doc/main/src/',
+  editGithubUrl: 'https://github.com/Salvatore-Als/cs2-rank-doc/tree/main/src/'
 };
 
 /*

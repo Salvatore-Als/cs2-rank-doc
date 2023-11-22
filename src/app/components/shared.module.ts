@@ -6,19 +6,23 @@ import { AlertComponent } from './alert/alert.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommandsComponent } from './commands/commands.component';
 import { TablePlaceholderComponent } from './table-placeholder/table-placeholder.component';
+import { EditButtonComponent } from './edit-button/edit-button.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const SHARED_COMPONENTS = [
   BadgeComponent,
   ConfigFileComponent,
   AlertComponent,
   CommandsComponent,
-  TablePlaceholderComponent
+  TablePlaceholderComponent,
+  EditButtonComponent
 ]
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   declarations: [
     ...SHARED_COMPONENTS
