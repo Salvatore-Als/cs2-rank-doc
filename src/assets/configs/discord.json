@@ -9,12 +9,6 @@
                 "type": "string",
                 "default_value": null
             },
-            "DISCORD_CLINETID": {
-                "description": "Your bot client ID.",
-                "required": true,
-                "type": "string",
-                "default_value": null
-            },
             "LOCALE": {
                 "description": "Locale used for date format and translation (fr / en / etc).",
                 "required": true,
@@ -248,6 +242,48 @@
                 "required": true,
                 "type": "string",
                 "default_value": "Enter a steamid64"
+            },
+            "Command_Map": {
+                "description": "Command for displaying the maps",
+                "required": true,
+                "type": "string",
+                "default_value": "rankmaps"
+            },
+            "Command_DescriptionMap": {
+                "description": "Description for displaying available maps for the rank",
+                "required": true,
+                "type": "string",
+                "default_value": "Display the available maps for the rank"
+            },
+            "Sentence_NoMapsFound": {
+                "description": "Description for the sentence when no maps are found",
+                "required": true,
+                "type": "string",
+                "default_value": "I can't found any maps."
+            },
+            "Stats_Map": {
+                "description": "Description for the map statistics",
+                "required": true,
+                "type": "string",
+                "default_value": "• #VAR#"
+            },
+            "Title_Maps": {
+                "description": "Description for the title indicating maps used for the rank",
+                "required": true,
+                "type": "string",
+                "default_value": "Maps used for the rank:"
+            },
+            "Sentence_MapNotFound": {
+                "description": "Description for the sentence when a map is not found",
+                "required": true,
+                "type": "string",
+                "default_value": "I can't found this map."
+            },
+            "CommandArg_DescriptionMap": {
+                "description": "Description for entering a map",
+                "required": true,
+                "type": "string",
+                "default_value": "Enter a map"
             }
         }
     }

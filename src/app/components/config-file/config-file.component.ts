@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Configs } from './config-file.model';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'config-file',
@@ -18,8 +19,9 @@ export class ConfigFileComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
+    const path: string = environment.production ? `https://raw.githubusercontent.com/Salvatore-Als/cs2-rank-doc/main/src/${this.path}` : this.path;
     this.configs$ = this.httpClient
-      .get<Configs>(this.path)
+      .get<Configs>(path)
       .pipe(takeUntil(this.destroy$));
   }
 

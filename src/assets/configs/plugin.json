@@ -15,6 +15,24 @@
                 "type": "boolean",
                 "default_value": false
             },
+            "enable_bot": {
+                "description": "Enable the bot interaction.",
+                "required": false,
+                "type": "boolean",
+                "default_value": true
+            },
+            "allow_negative_points": {
+                "description": "Allow to have negative points. Can be reset by using reset commands.",
+                "required": false,
+                "type": "boolean",
+                "default_value": false
+            },
+            "allow_reset_rank": {
+                "description": "Allow to use reset rank command.",
+                "required": false,
+                "type": "boolean",
+                "default_value": true
+            },
             "minimum_points": {
                 "description": "The minimum number of points required to be in the global rank.",
                 "required": true,

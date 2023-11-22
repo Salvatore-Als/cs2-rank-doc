@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Commands } from './commands.model';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'commands',
@@ -18,9 +19,13 @@ export class CommandsComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.commands$ = this.httpClient
-      .get<Commands>(this.path)
-      .pipe(takeUntil(this.destroy$));
+    const path: string = environment.production ? `https://raw.githubusercontent.com/Salvatore-Als/cs2-rank-doc/main/src/${this.path}` : this.path;
+
+    setTimeout(() => {
+      this.commands$ = this.httpClient
+        .get<Commands>(path)
+        .pipe(takeUntil(this.destroy$));
+    }, 8000);
   }
 
   ngOnDestroy(): void {
