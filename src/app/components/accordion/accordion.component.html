@@ -1,0 +1,5 @@
+<ng-content select="accordion-header"></ng-content>
+
+<div class="flex" [@openTransition]="open ? 'true':'false'">
+  <ng-content select="accordion-body"></ng-content>
+</div>

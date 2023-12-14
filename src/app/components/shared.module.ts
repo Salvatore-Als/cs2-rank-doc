@@ -8,6 +8,7 @@ import { CommandsComponent } from './commands/commands.component';
 import { TablePlaceholderComponent } from './table-placeholder/table-placeholder.component';
 import { EditButtonComponent } from './edit-button/edit-button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AccordionBodyComponent, AccordionComponent, AccordionHeaderComponent } from './accordion/accordion.component';
 
 const SHARED_COMPONENTS = [
   BadgeComponent,
@@ -15,7 +16,10 @@ const SHARED_COMPONENTS = [
   AlertComponent,
   CommandsComponent,
   TablePlaceholderComponent,
-  EditButtonComponent
+  EditButtonComponent,
+  AccordionComponent,
+  AccordionBodyComponent,
+  AccordionHeaderComponent
 ]
 
 @NgModule({

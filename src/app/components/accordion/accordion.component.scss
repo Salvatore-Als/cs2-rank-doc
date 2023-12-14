@@ -1,0 +1,24 @@
+:host {
+    @apply flex border overflow-hidden flex-col rounded-lg w-full bg-white text-gray-800;
+
+    ::ng-deep {
+        accordion-header {
+            @apply cursor-pointer text-gray-700 bg-gray-50;
+        }
+
+        accordion-header,
+        accordion-body {
+            @apply p-4 w-full;
+        }
+    }   
+}
+
+html.dark :host {
+    @apply text-gray-400 bg-gray-800 border-gray-700;
+
+    ::ng-deep {
+        accordion-header {
+            @apply bg-gray-700 text-gray-400;
+        }
+    }   
+}

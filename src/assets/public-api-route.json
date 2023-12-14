@@ -1,7 +1,7 @@
 [
     {
         "route": "/players/player/${steamid64}",
-        "description": "Returns the statistics of a player by steamid64",
+        "description": "Return the statistics of a player by steamid64",
         "method": "GET",
         "query_options": [
             {
@@ -47,7 +47,7 @@
     {
         "route": "/players/player/${name}",
         "method": "GET",
-        "description": "Returns the statistics of a player by name",
+        "description": "Return the statistics of a player by name",
         "query_options": [
             {
                 "query": "group",
@@ -92,7 +92,7 @@
     {
         "route": "/players/top",
         "method": "GET",
-        "description": "Returns the top of a player",
+        "description": "Return the top of a player",
         "query_options": [
             {
                 "query": "group",
@@ -137,7 +137,7 @@
     {
         "route": "/groups",
         "method": "GET",
-        "description": "Returns the available groups",
+        "description": "Return the available groups",
         "data": {
             "structure": {
                 "id": "number",
@@ -150,7 +150,7 @@
     {
         "route": "/maps",
         "method": "GET",
-        "description": "Returns the available maps",
+        "description": "Return the available maps",
         "data": {
             "structure": {
                 "id": "number",
