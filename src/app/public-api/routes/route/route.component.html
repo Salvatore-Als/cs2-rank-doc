@@ -1,7 +1,7 @@
 <div class="flex gap-2 items-center">
   <badge color="gray">{{ route.method }}</badge>
   <badge color="gray">{{ route.route }}</badge>
-  <span class="text-sm">{{ route.description }}</span>
+  <span class="text-sm text-gray-800 dark:text-gray-400">{{ route.description }}</span>
 </div>
 
 <table *ngIf="route.query_options?.length" class="rounded-lg overflow-hidden w-full text-sm text-left rtl:text-right text-gray-800 dark:text-gray-400">
