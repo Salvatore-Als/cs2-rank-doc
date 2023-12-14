@@ -45,9 +45,9 @@
         }
     },
     {
-        "route": "/players/player/${steamid64}",
+        "route": "/players/player/${name}",
         "method": "GET",
-        "description": "Returns the statistics of a player by steamid64",
+        "description": "Returns the statistics of a player by name",
         "query_options": [
             {
                 "query": "group",
