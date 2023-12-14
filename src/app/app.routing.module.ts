@@ -18,6 +18,10 @@ export const routes: Routes = [
         path: 'web',
         loadChildren: () => import('./web-interface/web-interface.module').then(m => m.WebInterfaceModule)
     },
+    {
+        path: 'public-api',
+        loadChildren: () => import('./public-api/public-api.module').then(m => m.PublicApiModule)
+    },
 ];
 
 @NgModule({

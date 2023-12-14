@@ -1,0 +1,50 @@
+[
+    {
+        "file_path": ".env",
+        "description": "This file is the environment file, you should create .env file at the root path.",
+        "variables": {
+            "PORT": {
+                "description": "Port of the API.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MINIMUM_POINTS": {
+                "description": "Minimum points to be on the rank.",
+                "required": true,
+                "type": "integer",
+                "default_value": null
+            },
+            "MYSQL_HOST": {
+                "description": "MySQL host.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_PASSWORD": {
+                "description": "MySQL password.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_DATABASE": {
+                "description": "MySQL database name.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_USER": {
+                "description": "MySQL user.",
+                "required": true,
+                "type": "string",
+                "default_value": null
+            },
+            "MYSQL_PORT": {
+                "description": "MySQL port.",
+                "required": true,
+                "type": "integer",
+                "default_value": null
+            }
+        }
+    }
+]

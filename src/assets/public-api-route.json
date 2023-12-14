@@ -1,0 +1,162 @@
+[
+    {
+        "route": "/players/player/${steamid64}",
+        "description": "Returns the statistics of a player by steamid64",
+        "method": "GET",
+        "query_options": [
+            {
+                "query": "group",
+                "type": "string",
+                "description": "Group to fetch the player",
+                "required": true
+            },
+            {
+                "query": "map",
+                "type": "string",
+                "description": "Map to fetch the player, don't using for global stats",
+                "required": false
+            }
+        ],
+        "data": {
+            "structure": {
+                "user_id": "number",
+                "points": "number",
+                "lastconnect": "number",
+                "death_suicide": "number",
+                "death_t": "number",
+                "death_ct": "number",
+                "bomb_planted": "number",
+                "bomb_exploded": "number",
+                "bomb_defused": "number",
+                "kill_knife": "number",
+                "kill_headshot": "number",
+                "kill_t": "number",
+                "kill_ct": "number",
+                "teamkill_ct": "number",
+                "teamkill_t": "number",
+                "killassist_t": "number",
+                "killassist_ct": "number",
+                "authid": "number",
+                "name": "string",
+                "ignore_annouce": "boolean",
+                "rank": "number"
+            },
+            "array": false
+        }
+    },
+    {
+        "route": "/players/player/${steamid64}",
+        "method": "GET",
+        "description": "Returns the statistics of a player by steamid64",
+        "query_options": [
+            {
+                "query": "group",
+                "type": "string",
+                "description": "Group to fetch the player",
+                "required": true
+            },
+            {
+                "query": "map",
+                "type": "string",
+                "description": "Map to fetch the player, don't using for global stats",
+                "required": false
+            }
+        ],
+        "data": {
+            "structure": {
+                "user_id": "number",
+                "points": "number",
+                "lastconnect": "number",
+                "death_suicide": "number",
+                "death_t": "number",
+                "death_ct": "number",
+                "bomb_planted": "number",
+                "bomb_exploded": "number",
+                "bomb_defused": "number",
+                "kill_knife": "number",
+                "kill_headshot": "number",
+                "kill_t": "number",
+                "kill_ct": "number",
+                "teamkill_ct": "number",
+                "teamkill_t": "number",
+                "killassist_t": "number",
+                "killassist_ct": "number",
+                "authid": "number",
+                "name": "string",
+                "ignore_annouce": "boolean",
+                "rank": "number"
+            },
+            "array": false
+        }
+    },
+    {
+        "route": "/players/top",
+        "method": "GET",
+        "description": "Returns the top of a player",
+        "query_options": [
+            {
+                "query": "group",
+                "type": "string",
+                "description": "Group to fetch the top",
+                "required": true
+            },
+            {
+                "query": "map",
+                "type": "string",
+                "description": "Map to fetch the top, don't using for global top",
+                "required": false
+            }
+        ],
+        "data": {
+            "structure": {
+                "user_id": "number",
+                "points": "number",
+                "lastconnect": "number",
+                "death_suicide": "number",
+                "death_t": "number",
+                "death_ct": "number",
+                "bomb_planted": "number",
+                "bomb_exploded": "number",
+                "bomb_defused": "number",
+                "kill_knife": "number",
+                "kill_headshot": "number",
+                "kill_t": "number",
+                "kill_ct": "number",
+                "teamkill_ct": "number",
+                "teamkill_t": "number",
+                "killassist_t": "number",
+                "killassist_ct": "number",
+                "authid": "number",
+                "name": "string",
+                "ignore_annouce": "boolean",
+                "rank": "number"
+            },
+            "array": true
+        }
+    },
+    {
+        "route": "/groups",
+        "method": "GET",
+        "description": "Returns the available groups",
+        "data": {
+            "structure": {
+                "id": "number",
+                "name": "string",
+                "custom_name": "string"
+            },
+            "array": true
+        }
+    },
+    {
+        "route": "/maps",
+        "method": "GET",
+        "description": "Returns the available maps",
+        "data": {
+            "structure": {
+                "id": "number",
+                "name": "string"
+            },
+            "array": true
+        }
+    }
+]

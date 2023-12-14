@@ -12,4 +12,7 @@
     <url>
         <loc>https://cs2rank.kriax.ovh/#/web</loc>
     </url>
+    <url>
+        <loc>https://cs2rank.kriax.ovh/#/public-api</loc>
+    </url>
 </urlset>

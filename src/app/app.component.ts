@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faGithub, faDiscord, faPhp, IconDefinition } from '@fortawesome/free-brands-svg-icons';
-import { faPuzzlePiece, faRankingStar, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faPuzzlePiece, faRankingStar, faSun, faMoon, faPlug } from '@fortawesome/free-solid-svg-icons';
 
 interface NavigationItem {
   routerLink: string | string[];
@@ -42,6 +42,11 @@ export class AppComponent {
       routerLink: ['web'],
       title: 'Web interface',
       icon: faPhp
+    },
+    {
+      routerLink: ['public-api'],
+      title: 'Public API',
+      icon: faPlug
     }
   ]
 
