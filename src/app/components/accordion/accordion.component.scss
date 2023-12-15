@@ -8,7 +8,7 @@
 
         accordion-header,
         accordion-body {
-            @apply p-4 w-full;
+            @apply p-4 w-full  text-gray-700;
         }
     }   
 }
@@ -17,8 +17,13 @@ html.dark :host {
     @apply text-gray-400 bg-gray-800 border-gray-700;
 
     ::ng-deep {
+        accordion-header,
+        accordion-body {
+            @apply text-gray-400;
+        }
+
         accordion-header {
-            @apply bg-gray-700 text-gray-400;
+            @apply bg-gray-700;
         }
     }   
 }

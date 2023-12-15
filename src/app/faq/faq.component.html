@@ -1,0 +1,12 @@
+<h1 class="text-xl font-bold text-gray-900 rounded-lg dark:text-white">FAQ</h1>
+<edit-button [path]="path"></edit-button>
+<div class="flex flex-col gap-2">
+    <accordion *ngFor="let faqItem of faqItems">
+        <accordion-header class="flex gap-2 items-center">
+            {{ faqItem.question }}
+        </accordion-header>
+        <accordion-body class="flex flex-col gap-4">
+            {{ faqItem.response }}
+        </accordion-body>
+    </accordion>
+</div>

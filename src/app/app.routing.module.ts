@@ -22,6 +22,10 @@ export const routes: Routes = [
         path: 'public-api',
         loadChildren: () => import('./public-api/public-api.module').then(m => m.PublicApiModule)
     },
+    {
+        path: 'faq',
+        loadChildren: () => import('./faq/faq.module').then(m => m.FAQModule)
+    },
 ];
 
 @NgModule({

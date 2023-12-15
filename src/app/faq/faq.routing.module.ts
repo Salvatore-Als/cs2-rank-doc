@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PublicApiComponent } from './public-api.component';
+import { FAQComponent } from './faq.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: PublicApiComponent
+        component: FAQComponent
     }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class PublicApiModuleRoutingModule { }
+export class FAQModuleRoutingModule { }
